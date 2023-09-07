@@ -13,7 +13,7 @@ class _AppServiceClient implements AppServiceClient {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://srhdp.wiremockapi.cloud';
+    baseUrl ??= 'https://srhdp.wiremockapi.cloud/';
   }
 
   final Dio _dio;
@@ -44,7 +44,7 @@ class _AppServiceClient implements AppServiceClient {
     )
             .compose(
               _dio.options,
-              '/customers/login',
+              '/customer/login',
               queryParameters: queryParameters,
               data: _data,
             )
